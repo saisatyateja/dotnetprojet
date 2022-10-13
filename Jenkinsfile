@@ -12,12 +12,12 @@ pipeline{
             steps{
                 sh 'dotnet build dotnetcoresample.csproj'
                 sh 'dotnet publish dotnetcoresample.csproj'
-                sh 'zip -r /home/centos/remote_root/workspace/DotNet6/bin/Debug/net6.0/dotnetcore-docs-hello-world-1.0.0.zip /home/centos/remote_root/workspace/DotNet6/bin/Debug/net6.0/publish/'
+                sh 'zip -r /bin/Debug/net6.0/dotnetcore-docs-hello-world-1.0.0.zip /bin/Debug/net6.0/publish/'
             }
         }
         stage('Artifacts'){
             steps{
-                archiveArtifacts artifacts: '/home/centos/remote_root/workspace/DotNet6/bin/Debug/net6.0/dotnetcore-docs-hello-world-1.0.0.zip'
+                archiveArtifacts artifacts: 'bin/Debug/net6.0/dotnetcore-docs-hello-world-1.0.0.zip'
             }
         }
     }
