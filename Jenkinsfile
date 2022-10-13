@@ -16,7 +16,9 @@ pipeline{
             }
         }
         stage('Artifacts'){
+            steps{
                 archiveArtifacts artifacts: '**/net6.0/dotnetcore-docs-hello-world-1.0.0.zip'
+            }
         }
     }
 }
