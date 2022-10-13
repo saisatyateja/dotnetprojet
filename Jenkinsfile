@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('vcs'){
             steps{
-                git url:'git@github.com:saisatyateja/dotnetprojet.git' ,
+                git url:'https://github.com/saisatyateja/dotnetprojet.git' ,
                     branch:'main'
             }
         }
