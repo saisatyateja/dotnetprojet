@@ -17,7 +17,7 @@ pipeline{
         }
         stage('Artifacts'){
             steps{
-                archiveArtifacts artifacts: '**?bin/Debug/net6.0/dotnetcore-docs-hello-world-1.0.0.zip'
+                archiveArtifacts artifacts: '/home/centos/remote_root/workspace/DotNet6/bin/Debug/net6.0/dotnetcore-docs-hello-world-1.0.0.zip'
             }
         }
     }
